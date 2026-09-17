@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Learn, Laugh & Network</title>
+<title>Laugh, Learn & Network</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -656,55 +656,165 @@
 
   .session-icon { font-size: 1.3rem; margin-top: 0.1rem; flex-shrink: 0; }
 
+
+
+  /* ENQUIRY FORM BOX */
   .cta-box {
     background: var(--sage-deep);
     border-radius: 4px;
-    padding: 3rem;
+    padding: 2.5rem;
     color: white;
-    text-align: center;
     position: sticky;
     top: 120px;
   }
 
   .cta-box h3 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem;
+    font-size: 1.9rem;
     font-weight: 300;
-    margin-bottom: 0.8rem;
-  }
-
-  .cta-box p {
-    font-size: 0.88rem;
-    opacity: 0.8;
-    margin-bottom: 2rem;
-    line-height: 1.7;
-    font-weight: 300;
-  }
-
-  .cta-box .btn-primary {
-    background: var(--accent);
-    width: 100%;
+    margin-bottom: 0.4rem;
     text-align: center;
-    padding: 1rem 2rem;
-    font-size: 0.85rem;
   }
 
-  .cta-box .btn-primary:hover { background: #b8954f; }
+  .cta-box .cta-sub {
+    font-size: 0.82rem;
+    opacity: 0.7;
+    margin-bottom: 1.8rem;
+    line-height: 1.6;
+    font-weight: 300;
+    text-align: center;
+  }
 
-  .cta-divider {
-    margin: 2rem 0 1.5rem;
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-group label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--sage-light);
+    font-weight: 500;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(181,201,177,0.25);
+    border-radius: 3px;
+    padding: 0.7rem 0.9rem;
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 300;
+    width: 100%;
+    transition: border-color 0.2s, background 0.2s;
+    outline: none;
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: rgba(255,255,255,0.3);
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--sage-light);
+    background: rgba(255,255,255,0.12);
+  }
+
+  .form-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23b5c9b1' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.9rem center;
+    cursor: pointer;
+  }
+
+  .form-group select option {
+    background: var(--sage-deep);
+    color: white;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 90px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+
+  .form-submit {
+    background: var(--accent);
+    color: white;
     border: none;
-    border-top: 1px solid rgba(255,255,255,0.15);
+    width: 100%;
+    padding: 0.95rem 2rem;
+    border-radius: 3px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background 0.25s, transform 0.2s;
   }
 
-  .cta-contact {
-    font-size: 0.78rem;
-    opacity: 0.6;
+  .form-submit:hover {
+    background: #b8954f;
+    transform: translateY(-1px);
   }
 
-  .cta-contact a {
+  .form-divider {
+    margin: 1.5rem 0 1.2rem;
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .form-email-alt {
+    font-size: 0.75rem;
+    opacity: 0.5;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  .form-email-alt a {
     color: var(--sage-light);
     text-decoration: none;
+  }
+
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  .form-success .success-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .form-success h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-success p {
+    font-size: 0.82rem;
+    opacity: 0.65;
+    font-weight: 300;
   }
 
   /* TESTIMONIAL */
@@ -891,7 +1001,7 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">Learn, <span>Laugh</span> & Network</div>
+  <div class="nav-logo">Laugh, <span>Learn</span> & Network</div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#what-you-get">Sessions</a></li>
@@ -905,12 +1015,12 @@
   <div class="hero-left">
     <p class="hero-eyebrow fade-up">Suffolk & Beyond · HR & People Skills</p>
     <h1 class="fade-up delay-1">
-      <em>Learn</em> the HR stuff.<br>
+      <em>Laugh</em> along the way.<br>
       Pick up the <span class="accent-word">people skills.</span><br>
       Leave with a <em>network.</em>
     </h1>
     <p class="hero-tagline fade-up delay-2">
-      Join our engaging <strong>Learn, Laugh & Connect</strong> series — perfect for entrepreneurs, business owners, directors and new HR professionals who want to truly excel with their teams.
+      Join our engaging <strong>Laugh, Learn & Connect</strong> series — perfect for entrepreneurs, business owners, directors and new HR professionals who want to truly excel with their teams.
     </p>
     <div class="hero-ctas fade-up delay-3">
       <a href="#session-info" class="btn-primary">Reserve Your Place</a>
@@ -936,31 +1046,24 @@
     <div class="hero-botanical">
       <svg class="botanical-svg" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
         <g fill="none" stroke="#4e6b48" stroke-width="1.5">
-          <!-- Main stem -->
           <path d="M250 460 Q240 380 255 300 Q265 220 245 140 Q235 80 250 40" stroke-width="2.5"/>
-          <!-- Left branches -->
           <path d="M252 320 Q200 290 160 260 Q130 240 100 220"/>
           <path d="M248 270 Q200 250 165 230 Q135 215 105 200"/>
           <path d="M251 380 Q195 370 155 355 Q120 340 85 325"/>
-          <!-- Right branches -->
           <path d="M253 300 Q305 275 345 250 Q375 230 410 215"/>
           <path d="M249 240 Q300 220 340 200 Q370 185 405 172"/>
           <path d="M252 360 Q308 348 350 335 Q385 322 418 310"/>
-          <!-- Leaves left -->
           <ellipse cx="130" cy="232" rx="38" ry="18" transform="rotate(-25 130 232)" stroke-width="1.2"/>
           <ellipse cx="150" cy="212" rx="30" ry="14" transform="rotate(-30 150 212)" stroke-width="1.2"/>
           <ellipse cx="108" cy="200" rx="32" ry="16" transform="rotate(-20 108 200)" stroke-width="1.2"/>
           <ellipse cx="115" cy="330" rx="40" ry="19" transform="rotate(-18 115 330)" stroke-width="1.2"/>
-          <!-- Leaves right -->
           <ellipse cx="372" cy="240" rx="38" ry="18" transform="rotate(28 372 240)" stroke-width="1.2"/>
           <ellipse cx="350" cy="220" rx="30" ry="14" transform="rotate(22 350 220)" stroke-width="1.2"/>
           <ellipse cx="388" cy="325" rx="40" ry="19" transform="rotate(22 388 325)" stroke-width="1.2"/>
-          <!-- Small circles -->
           <circle cx="248" cy="60" r="6" fill="#7d9b76" stroke="none"/>
           <circle cx="255" cy="140" r="4" fill="#b5c9b1" stroke="none"/>
           <circle cx="250" cy="200" r="3.5" fill="#7d9b76" stroke="none"/>
         </g>
-        <!-- Decorative dots -->
         <g fill="#c9a96e" opacity="0.5">
           <circle cx="80" cy="180" r="3"/>
           <circle cx="420" cy="195" r="3"/>
@@ -971,7 +1074,7 @@
     </div>
     <div class="hero-card-float">
       <p>"Where professional development actually feels like a pleasure."</p>
-      <small>Learn · Laugh · Network</small>
+      <small>Laugh · Learn · Network</small>
     </div>
   </div>
 </section>
@@ -981,7 +1084,7 @@
   <div class="intro-strip-item"><span>🌿</span> Suffolk & Beyond</div>
   <div class="intro-strip-item"><span>📋</span> CIPD-Qualified HR</div>
   <div class="intro-strip-item"><span>🧠</span> Myers Briggs & NLP</div>
-  <div class="intro-strip-item"><span>📅</span> 6 Sessions · Jun–Dec 2026</div>
+  <div class="intro-strip-item"><span>📅</span> 6 Sessions · Nov–Dec 2026</div>
   <div class="intro-strip-item"><span>✨</span> Half-Day Format</div>
 </div>
 
@@ -992,10 +1095,10 @@
       <p class="section-label">About the series</p>
       <h2 class="section-title">Expert HR &amp; People Skills <em>Sessions</em></h2>
       <p style="font-size:0.95rem; color:var(--warm-mid); line-height:1.85; font-weight:300; margin-bottom:1.5rem;">
-        Learn, Laugh and Network is dedicated to equipping professionals with the essential HR knowledge and training necessary for today's dynamic workplace.
+        Laugh, Learn and Network is dedicated to equipping professionals with the essential HR knowledge and training necessary for today's dynamic workplace.
       </p>
       <p style="font-size:0.95rem; color:var(--warm-mid); line-height:1.85; font-weight:300; margin-bottom:2rem;">
-        Our six tailored half-day sessions, spanning from June to December 2026, emphasise practical learning and real-world application — each one co-delivered by Shelly and Dan, whose collaborative approach fosters an engaging and supportive environment where you not only gain knowledge but also valuable networking opportunities.
+        Our six tailored half-day sessions, spanning from November to December 2026, emphasise practical learning and real-world application — each one co-delivered by Shelly and Dan, whose collaborative approach fosters an engaging and supportive environment where you not only gain knowledge but also valuable networking opportunities.
       </p>
       <a href="#session-info" class="btn-primary">See the Sessions</a>
     </div>
@@ -1016,7 +1119,7 @@
       </div>
       <div style="background: var(--sage-pale); border-radius: 4px; padding: 2rem; border-top: 3px solid var(--sage);">
         <div style="font-size:1.5rem; margin-bottom:0.4rem;">📅</div>
-        <div style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--warm-mid);">Jun – Dec 2026</div>
+        <div style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--warm-mid);">Nov – Dec 2026</div>
       </div>
       <div style="background: var(--sage-pale); border-radius: 4px; padding: 2rem; border-top: 3px solid var(--sage);">
         <div style="font-size:1.5rem; margin-bottom:0.4rem;">🤝</div>
@@ -1066,7 +1169,7 @@
       </div>
     </div>
     <div class="who-block-accent">
-      <span class="big-num">50+</span>
+      <span class="big-num">∞</span>
       <small>HR topics covered across the series</small>
     </div>
   </div>
@@ -1130,47 +1233,115 @@
     <div class="session-grid">
       <ul class="session-detail-list">
         <li class="session-detail-item">
-          <span class="session-icon">🌿</span>
+          <span class="session-icon">💻</span>
           <div>
-            <strong>Relaxed, small-group format</strong>
-            Intimate enough to ask real questions and get genuine answers — not a lecture theatre experience.
+            <strong>Online Introduction — 3rd November 2026</strong>
+            A free online taster session to meet Shelly and Dan, find out what the series covers, and grab your spot.
           </div>
         </li>
         <li class="session-detail-item">
-          <span class="session-icon">📍</span>
+          <span class="session-icon">📋</span>
           <div>
-            <strong>Suffolk & surrounding areas</strong>
-            Based in and around Suffolk, with sessions designed to be accessible for local founders and leaders.
+            <strong>Session 1 — 11th November 2026</strong>
+            Employment Rights Act &amp; Change Management Training · Face to face · Ipswich (venue TBC)
+            <span style="font-size:0.75rem; color:var(--sage); display:block; margin-top:0.3rem;">📌 Venue to be confirmed</span>
           </div>
         </li>
         <li class="session-detail-item">
-          <span class="session-icon">🧠</span>
+          <span class="session-icon">💬</span>
           <div>
-            <strong>Practical, take-home knowledge</strong>
-            Every session covers tangible HR frameworks and people skills you can apply the very next day.
+            <strong>Session 2 — 26th November 2026</strong>
+            Grievances &amp; Emotional Management · Face to face · Ipswich (venue TBC)
+            <span style="font-size:0.75rem; color:var(--sage); display:block; margin-top:0.3rem;">📌 Venue to be confirmed</span>
           </div>
         </li>
         <li class="session-detail-item">
-          <span class="session-icon">🤝</span>
+          <span class="session-icon">⭐</span>
           <div>
-            <strong>Built-in networking time</strong>
-            We build in structured connection time so you leave with real contacts, not just a business card.
+            <strong>Session 3 — 3rd December 2026</strong>
+            Absence &amp; Motivational Techniques · Face to face · Ipswich (venue TBC)
           </div>
         </li>
         <li class="session-detail-item">
-          <span class="session-icon">✅</span>
+          <span class="session-icon">🗓️</span>
           <div>
-            <strong>A series you can grow with</strong>
-            Each session stands alone or builds as part of the broader series — join at any point.
+            <strong>Sessions 4, 5 & 6 — Dates Coming Soon</strong>
+            We're shaping the final three sessions around what matters most to you right now. Themes we're exploring include Disciplinary &amp; Effective Communication, Performance &amp; Setting Expectations, and a festive Christmas Networking session — but your current challenges will help shape the agenda.
           </div>
         </li>
       </ul>
       <div class="cta-box">
-        <h3>Ready to join us?</h3>
-        <p>Spaces are limited to keep sessions genuinely intimate. Drop us a message to find out about upcoming dates and reserve your spot.</p>
-        <a href="mailto:hello@learnlaughandnetwork.co.uk" class="btn-primary">Get In Touch</a>
-        <hr class="cta-divider">
-        <p class="cta-contact">Or email us directly at<br><a href="mailto:hello@learnlaughandnetwork.co.uk">hello@learnlaughandnetwork.co.uk</a></p>
+        <h3>Reserve your place</h3>
+        <p class="cta-sub">Spaces are limited — fill in the form below and we'll be in touch to confirm your spot.</p>
+
+        <div id="enquiry-form">
+          <form action="https://formspree.io/f/xwvyblzn" method="POST" onsubmit="handleFormSubmit(event)">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="first_name" placeholder="Jane" required>
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="last_name" placeholder="Smith" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="jane@yourbusiness.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="company">Business / Organisation</label>
+              <input type="text" id="company" name="company" placeholder="Your business name">
+            </div>
+
+            <div class="form-group">
+              <label for="role">Your Role</label>
+              <select id="role" name="role">
+                <option value="" disabled selected>Select your role…</option>
+                <option>Business Owner / Director</option>
+                <option>Entrepreneur / Founder</option>
+                <option>HR Professional</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="session">Session of Interest</label>
+              <select id="session" name="session">
+                <option value="" disabled selected>Which session interests you?</option>
+                <option>Online Intro — 3rd November</option>
+                <option>Session 1 — 11th November · Employment Rights & Change Management</option>
+                <option>Session 2 — 26th November · Grievances & Emotional Management</option>
+                <option>Session 3 — 3rd December · Absence & Motivational Techniques</option>
+                <option>Session 4 — Disciplinary & Effective Communication (date TBC)</option>
+                <option>Session 5 — Performance & Setting Expectations (date TBC)</option>
+                <option>Session 6 — Christmas Networking (date TBC)</option>
+                <option>All Sessions</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">What's your current pain point or challenge?</label>
+              <textarea id="message" name="message" placeholder="Tell us what you're struggling with right now — we'll make sure it's covered…"></textarea>
+            </div>
+
+            <button type="submit" class="form-submit">Send Enquiry →</button>
+
+          </form>
+        </div>
+
+        <div class="form-success" id="form-success">
+          <span class="success-icon">🌿</span>
+          <h4>Thank you!</h4>
+          <p>We've received your enquiry and will be in touch shortly to confirm your place.</p>
+        </div>
+
+        <hr class="form-divider">
+        <p class="form-email-alt">Prefer email? <a href="mailto:hello@learnlaughandnetwork.co.uk">hello@learnlaughandnetwork.co.uk</a></p>
       </div>
     </div>
   </div>
@@ -1281,12 +1452,12 @@
   <p class="quote-text">
     Learn the HR stuff. Pick up the people skills. Leave with a network — and maybe even a new favourite colleague.
   </p>
-  <p style="font-size:0.8rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sage); position:relative; z-index:1;">Shelly & Dan · Learn, Laugh & Network</p>
+  <p style="font-size:0.8rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sage); position:relative; z-index:1;">Shelly & Dan · Laugh, Learn & Network</p>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Learn, Laugh & Network</div>
+  <div class="footer-logo">Laugh, Learn & Network</div>
   <p>© 2026 · Suffolk & Beyond · In partnership with RaspberryHR & Switch Direction</p>
   <ul class="footer-links">
     <li><a href="#about">About</a></li>
@@ -1296,6 +1467,33 @@
 </footer>
 
 <script>
+  // Form submission handler
+  async function handleFormSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const btn = form.querySelector('.form-submit');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        document.getElementById('enquiry-form').style.display = 'none';
+        document.getElementById('form-success').style.display = 'block';
+      } else {
+        btn.textContent = 'Something went wrong — try again';
+        btn.disabled = false;
+      }
+    } catch {
+      btn.textContent = 'Something went wrong — try again';
+      btn.disabled = false;
+    }
+  }
+
   // Intersection observer for subtle scroll animations
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
