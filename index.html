@@ -995,6 +995,302 @@
   }
 
   .organic-divider svg { width: 100%; height: 100%; }
+
+  /* ═══════════════════════════════════════
+     RESPONSIVE — Tablet, Mobile
+  ═══════════════════════════════════════ */
+
+  /* ── Tablet: 768px–1024px ── */
+  @media (max-width: 1024px) {
+    nav {
+      padding: 1rem 2rem;
+    }
+    .nav-links {
+      gap: 1.5rem;
+    }
+    .hero {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+    .hero-left {
+      padding: 7rem 3rem 3rem;
+    }
+    .hero-right {
+      height: 420px;
+    }
+    .hero-card-float {
+      left: 20px;
+      bottom: 10%;
+    }
+    .section {
+      padding: 5rem 3rem;
+    }
+    .what-section {
+      padding: 5rem 3rem;
+    }
+    .pillars-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    #about {
+      grid-template-columns: 1fr !important;
+      gap: 3rem !important;
+      padding: 5rem 3rem !important;
+    }
+    .who-visual {
+      height: 320px;
+    }
+    .who-block-accent {
+      bottom: -16px;
+      right: -16px;
+      width: 160px;
+      height: 160px;
+    }
+    .team-section {
+      padding: 5rem 3rem;
+    }
+    .team-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .session-section {
+      padding: 5rem 3rem;
+    }
+    .session-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    .cta-box {
+      position: static;
+    }
+    .reviews-section {
+      padding: 5rem 3rem;
+    }
+    .reviews-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .quote-section {
+      padding: 4rem 3rem;
+    }
+    footer {
+      padding: 2.5rem 3rem;
+    }
+    /* About the series two-col */
+    .about-series-grid {
+      grid-template-columns: 1fr !important;
+      gap: 3rem !important;
+    }
+  }
+
+  /* ── Mobile: up to 767px ── */
+  @media (max-width: 767px) {
+    nav {
+      padding: 1rem 1.5rem;
+    }
+    .nav-links {
+      display: none;
+    }
+    .hero {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+    .hero-left {
+      padding: 6rem 1.5rem 2.5rem;
+    }
+    .hero h1 {
+      font-size: 2.4rem;
+    }
+    .hero-tagline {
+      font-size: 0.95rem;
+    }
+    .hero-ctas {
+      flex-direction: column;
+    }
+    .btn-primary, .btn-secondary {
+      text-align: center;
+      width: 100%;
+    }
+    .hero-badges {
+      gap: 1rem;
+    }
+    .hero-right {
+      height: 300px;
+    }
+    .hero-card-float {
+      left: 12px;
+      bottom: 8%;
+      padding: 1rem 1.2rem;
+    }
+    .hero-card-float p {
+      font-size: 0.85rem;
+      max-width: 180px;
+    }
+    .intro-strip {
+      padding: 1.2rem 1.5rem;
+      gap: 1rem;
+      justify-content: flex-start;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+    }
+    .intro-strip-item {
+      white-space: nowrap;
+      font-size: 0.78rem;
+    }
+    /* About the series */
+    section[style*="grid-template-columns: 1fr 1fr"] {
+      display: block !important;
+      padding: 4rem 1.5rem !important;
+    }
+    .what-section {
+      padding: 4rem 1.5rem;
+    }
+    .pillars-grid {
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+      margin-top: 2.5rem;
+    }
+    #about {
+      grid-template-columns: 1fr !important;
+      gap: 2rem !important;
+      padding: 4rem 1.5rem !important;
+    }
+    .who-visual {
+      height: 260px;
+    }
+    .who-block-accent {
+      width: 130px;
+      height: 130px;
+      bottom: -12px;
+      right: -12px;
+    }
+    .who-block-accent .big-num {
+      font-size: 2rem;
+    }
+    .who-tags {
+      margin: 1.2rem 0 2rem;
+    }
+    .section-title {
+      font-size: 1.9rem;
+    }
+    .team-section {
+      padding: 4rem 1.5rem;
+    }
+    .team-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .team-card {
+      padding: 2rem 1.5rem;
+    }
+    .session-section {
+      padding: 4rem 1.5rem;
+    }
+    .session-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .cta-box {
+      position: static;
+      padding: 2rem 1.5rem;
+    }
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+    .reviews-section {
+      padding: 4rem 1.5rem;
+    }
+    .reviews-grid {
+      grid-template-columns: 1fr;
+    }
+    .quote-section {
+      padding: 3.5rem 1.5rem;
+    }
+    .quote-mark {
+      font-size: 5rem;
+    }
+    .quote-text {
+      font-size: 1.3rem;
+    }
+    footer {
+      padding: 2rem 1.5rem;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .footer-links {
+      gap: 1.2rem;
+    }
+    /* Session detail items */
+    .session-detail-item {
+      padding: 1rem 1.2rem;
+    }
+    /* Inline about-series grids */
+    div[style*="grid-template-columns: 1fr 1fr"] {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 1.2rem !important;
+    }
+    div[style*="grid-template-columns: 1.2fr 1fr"] {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 2rem !important;
+    }
+  }
+
+  /* ── Small mobile: up to 400px ── */
+  @media (max-width: 400px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+    .hero-left {
+      padding: 5.5rem 1.2rem 2rem;
+    }
+    .nav-logo {
+      font-size: 1.1rem;
+    }
+  }
+
+
+  /* Burger menu */
+  .nav-burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 200;
+  }
+  .nav-burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--warm-dark);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+  @media (max-width: 767px) {
+    .nav-burger { display: flex; }
+    .nav-links {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(250,248,244,0.98);
+      backdrop-filter: blur(12px);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+      z-index: 150;
+    }
+    .nav-links.open {
+      display: flex;
+    }
+    .nav-links a {
+      font-size: 1.2rem;
+    }
+  }
+
 </style>
 </head>
 <body>
@@ -1002,12 +1298,15 @@
 <!-- NAV -->
 <nav>
   <div class="nav-logo">Learn, <span>Laugh</span> & Network</div>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#what-you-get">Sessions</a></li>
-    <li><a href="#team">Meet Us</a></li>
-    <li><a href="#session-info" class="nav-cta">Book a Spot</a></li>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about" onclick="closeMenu()">About</a></li>
+    <li><a href="#what-you-get" onclick="closeMenu()">Sessions</a></li>
+    <li><a href="#team" onclick="closeMenu()">Meet Us</a></li>
+    <li><a href="#session-info" class="nav-cta" onclick="closeMenu()">Book a Spot</a></li>
   </ul>
+  <button class="nav-burger" id="nav-burger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -1098,7 +1397,7 @@
         Learn, Laugh and Network is dedicated to equipping professionals with the essential HR knowledge and training necessary for today's dynamic workplace.
       </p>
       <p style="font-size:0.95rem; color:var(--warm-mid); line-height:1.85; font-weight:300; margin-bottom:2rem;">
-        Our six tailored half-day sessions, spanning from November to December 2026, emphasise practical learning and real-world application — each one co-delivered by Shelly and Dan, whose collaborative approach fosters an engaging and supportive environment where you not only gain knowledge but also valuable networking opportunities.
+        Our six tailored half-day sessions, kicking off in November 2026, emphasise practical learning and real-world application — each one co-delivered by Shelly and Dan, whose collaborative approach fosters an engaging and supportive environment where you not only gain knowledge but also valuable networking opportunities.
       </p>
       <a href="#session-info" class="btn-primary">See the Sessions</a>
     </div>
@@ -1236,37 +1535,21 @@
           <span class="session-icon">💻</span>
           <div>
             <strong>Online Introduction — 3rd November 2026</strong>
-            A free online taster session to meet Shelly and Dan, find out what the series covers, and grab your spot.
+            A free online taster to meet Shelly and Dan, find out what the series covers, and grab your spot.
           </div>
         </li>
         <li class="session-detail-item">
           <span class="session-icon">📋</span>
           <div>
-            <strong>Session 1 — 11th November 2026</strong>
-            Employment Rights Act &amp; Change Management Training · Face to face · Ipswich (venue TBC)
-            <span style="font-size:0.75rem; color:var(--sage); display:block; margin-top:0.3rem;">📌 Venue to be confirmed</span>
-          </div>
-        </li>
-        <li class="session-detail-item">
-          <span class="session-icon">💬</span>
-          <div>
-            <strong>Session 2 — 26th November 2026</strong>
-            Grievances &amp; Emotional Management · Face to face · Ipswich (venue TBC)
-            <span style="font-size:0.75rem; color:var(--sage); display:block; margin-top:0.3rem;">📌 Venue to be confirmed</span>
-          </div>
-        </li>
-        <li class="session-detail-item">
-          <span class="session-icon">⭐</span>
-          <div>
-            <strong>Session 3 — 3rd December 2026</strong>
-            Absence &amp; Motivational Techniques · Face to face · Ipswich (venue TBC)
+            <strong>Session 1 — 3rd December 2026</strong>
+            Employment Rights Act &amp; Change Management Training · Face to face at <strong>Milsoms, Kesgrave, Ipswich</strong>
           </div>
         </li>
         <li class="session-detail-item">
           <span class="session-icon">🗓️</span>
           <div>
-            <strong>Sessions 4, 5 & 6 — Dates Coming Soon</strong>
-            We're shaping the final three sessions around what matters most to you right now. Themes we're exploring include Disciplinary &amp; Effective Communication, Performance &amp; Setting Expectations, and a festive Christmas Networking session — but your current challenges will help shape the agenda.
+            <strong>Sessions 2–6 — Dates Coming Soon</strong>
+            We're shaping the remaining sessions around what matters most to you. Themes we're exploring include Grievances &amp; Emotional Management, Absence &amp; Motivational Techniques, Disciplinary &amp; Effective Communication, Performance &amp; Setting Expectations, and a festive Christmas Networking session — register your interest to be first to know.
           </div>
         </li>
       </ul>
@@ -1313,13 +1596,9 @@
               <label for="session">Session of Interest</label>
               <select id="session" name="session">
                 <option value="" disabled selected>Which session interests you?</option>
-                <option>Online Intro — 3rd November</option>
-                <option>Session 1 — 11th November · Employment Rights & Change Management</option>
-                <option>Session 2 — 26th November · Grievances & Emotional Management</option>
-                <option>Session 3 — 3rd December · Absence & Motivational Techniques</option>
-                <option>Session 4 — Disciplinary & Effective Communication (date TBC)</option>
-                <option>Session 5 — Performance & Setting Expectations (date TBC)</option>
-                <option>Session 6 — Christmas Networking (date TBC)</option>
+                <option>Online Introduction — 3rd November 2026 (free, online)</option>
+                <option>Session 1 — 3rd December 2026 · Milsoms, Kesgrave, Ipswich</option>
+                <option>Sessions 2–6 — Dates TBC (register your interest)</option>
                 <option>All Sessions</option>
               </select>
             </div>
@@ -1467,6 +1746,18 @@
 </footer>
 
 <script>
+
+  function toggleMenu() {
+    const links = document.getElementById('nav-links');
+    const burger = document.getElementById('nav-burger');
+    links.classList.toggle('open');
+    burger.classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('nav-links').classList.remove('open');
+    document.getElementById('nav-burger').classList.remove('open');
+  }
+
   // Form submission handler
   async function handleFormSubmit(e) {
     e.preventDefault();
